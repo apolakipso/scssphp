@@ -2518,9 +2518,11 @@ class Compiler
                 $h = sprintf('#%02x%02x%02x', $r, $g, $b);
 
                 // Converting hex color to short notation (e.g. #003399 to #039)
-                if ($h[1] === $h[2] && $h[3] === $h[4] && $h[5] === $h[6]) {
-                    $h = '#' . $h[1] . $h[3] . $h[5];
-                }
+                // NOTE: Removed support for short notation
+                // TODO: Add option to enable short notation
+                // if ($h[1] === $h[2] && $h[3] === $h[4] && $h[5] === $h[6]) {
+                //     $h = '#' . $h[1] . $h[3] . $h[5];
+                // }
 
                 return $h;
 
